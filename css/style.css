@@ -237,7 +237,7 @@ address>p {
 
     @keyframes blast-off {
         0% {
-            margin-top: 430px;
+            margin-top: 420px;
         }
 
         50% {
@@ -245,7 +245,7 @@ address>p {
         }
 
         100% {
-            margin-top: 430px;
+            margin-top: 420px;
         }
     }
 }
