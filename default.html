@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>My Mid-Term Project</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Alex Carbajal</h1>
+        </header>
+        <nav>
+            <!-- favorites lists -->
+            <section>
+                <h2>Favorite Food</h2>
+                <ul>
+                    <li>Pizza</li>
+                    <li>Cheeseburgers</li>
+                    <li>Chicken</li>
+                    <li>Chocolate</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Favorite Music</h2>
+                <ul>
+                    <li>Orchestra</li>
+                    <li>Jazz</li>
+                    <li>Chiptune</li>
+                    <li>Electro Swing</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Table</h2>
+                <table>
+                    <tr>
+                        <th class="cell"></th>
+                        <th class="cell"></th>
+                        <th class="mod-cell" rowspan="2"></th>
+                    </tr>
+                    <tr>
+                        <td class="cell"></td>
+                        <td class="cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell"></td>
+                        <td class="cell"></td>
+                        <td class="cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="mod-cell" colspan="3"></td>
+                    </tr>
+                </table>
+            </section>
+        </nav>
+        <main>
+            <h3 id="about">About</h3>
+            <article>
+                <p>I'm a computer science student at <em>Walla Walla Community College</em>. In my free time I enjoy
+                    programming,
+                    playing video games, and browsing social media.</p>
+                <p>My goal is to become a professional web and/or software developer. I've always had an interest in
+                    technology, I love using computers, and I enjoy creative work.</p>
+                <p>Learning to program is one of the most difficult tasks I've ever done, but it's made me build
+                    discipline
+                    and critical thinking skills, so it's been paying off.</p>
+            </article>
+            <h3 id="contact">Contact Me</h3>
+            <form action="placeholder.php" method="POST">
+                <label>Email
+                    <input type="email" name="email">
+                </label>
+                <label>Message
+                    <textarea name="message" cols="30" rows="2"></textarea>
+                </label>
+                <input type="submit" value="Submit">
+            </form>
+            <!-- audio player -->
+            <div class="music">
+                <p>&#127925&#128293 <em>Play a fire tune</em> &#127925&#128293</p>
+                <audio src="./assets/music/Dennis-Tune.m4a" controls>
+                    <embed src="./assets/music/Dennis-Tune.m4a" loop="true" hidden="false" autostart="false">
+                </audio>
+            </div>
+        </main>
+        <aside>
+            <img src="./assets/img/rocket.png" alt="Rocket">
+        </aside>
+        <footer>
+            <address>
+                <p>Alex Carbajal | </p>
+                <p>864 Fleming Way
+                    Petersburg, VA 23803 | </p>
+                <p>804-733-5420</p>
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>

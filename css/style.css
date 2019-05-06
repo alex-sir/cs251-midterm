@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+:root {
+    --border: 1px solid #202020;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #303030;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "head head head"
+        "nav main aside"
+        "foot foot foot";
+    grid-template-rows: 10vh 70vh 10vh;
+    grid-template-columns: 25vw 45vw 20vw;
+    background-color: rgb(232, 232, 232);
+    width: 90vw;
+    height: 90vh;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    grid-area: head;
+    background-image: url("../assets/img/ocean-water-in-vancouver-british-columbia-canada.jpg");
+    background-color: rgba(0, 0, 0, 0.25);
+    background-blend-mode: darken;
+    color: white;
+}
+
+header>h1 {
+    text-shadow: 1px 1px 5px #202020;
+}
+
+/* nav & main text */
+nav>section,
+main {
+    font-family: Georgia;
+    font-size: 1.1em;
+    overflow: auto;
+}
+
+/* nav */
+nav {
+    grid-area: nav;
+    border-right: var(--border);
+    overflow: auto;
+}
+
+nav>section:nth-child(-n + 2) {
+    border-bottom: var(--border);
+}
+
+nav>section>h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+nav>section>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0 10px 25px;
+}
+
+/* nav table */
+table,
+table * {
+    border: var(--border);
+}
+
+table * {
+    width: 80px;
+    height: 55px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+.cell {
+    background-color: rgba(220, 20, 60, 0.4)
+}
+
+.mod-cell {
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+    grid-area: main;
+    border-right: var(--border);
+    padding: 0 30px 0 30px;
+}
+
+#about {
+    margin: 10px auto;
+}
+
+main>article {
+    border-bottom: var(--border);
+}
+
+main>article>p {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+#contact {
+    margin: 10px auto;
+}
+
+/* form */
+form {
+    padding: 12px;
+    border: var(--border);
+    border-radius: 20px;
+    min-width: 300px;
+}
+
+form * {
+    display: block;
+}
+
+input,
+textarea {
+    width: 50%;
+    padding: 4px;
+    margin: 5px 0;
+    font-family: Georgia;
+}
+
+input[type="submit"] {
+    color: #e8e8e8;
+    font-size: 15px;
+    border: none;
+    background-color: #418a44;
+    transition: 100ms ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #306e32;
+    cursor: pointer;
+}
+
+/* audio player */
+.music {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.music p {
+    white-space: nowrap;
+}
+
+.music em {
+    font-weight: 600;
+}
+
+.music audio {
+    min-width: 15vw;
+}
+
+/* aside */
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    grid-area: aside;
+    background: linear-gradient(#202020, #87ceeb);
+}
+
+aside>img {
+    animation: blast-off 8s infinite ease-in-out;
+}
+
+aside>img:hover {
+    transform: rotate(180deg);
+}
+
+@keyframes blast-off {
+    0% {
+        margin-top: 60vh;
+    }
+
+    50% {
+        margin-top: 2vh;
+    }
+
+    100% {
+        margin-top: 60vh;
+    }
+}
+
+/* footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: foot;
+    border-top: var(--border);
+    color: white;
+    background-color: #00607e;
+}
+
+address>p {
+    font-size: 0.95em;
+    display: inline-block;
+}
+
+/* container break points */
+@media only screen and (max-height: 650px) {
+    .container {
+        grid-template-rows: 10% 80% 10%;
+        grid-template-columns: 30% 50% 20%;
+        width: 90%;
+        height: 650px;
+    }
+
+    @keyframes blast-off {
+        0% {
+            margin-top: 430px;
+        }
+
+        50% {
+            margin-top: 20px;
+        }
+
+        100% {
+            margin-top: 430px;
+        }
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .container {
+        width: 500px;
+    }
+}
